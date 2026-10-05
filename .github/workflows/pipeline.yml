@@ -30,8 +30,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run pytest
-        run: |
-          pytest -v
+        env:
+          PYTHONPATH: .
+        run: pytest -v
 
 
   docker:
